@@ -1,51 +1,36 @@
-<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://w3.org">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        .box {
-          width: 100%;
-          height: 200px;
-          background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-          border-radius: 12px;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-family: sans-serif;
-          font-size: 28px;
-          font-weight: bold;
-        }
-        .snowflake {
-          position: absolute;
-          top: -20px;
-          color: #ffffff;
-          user-select: none;
-          animation: fall linear infinite;
-        }
-        @keyframes fall {
-          0% { transform: translateY(-20px); opacity: 1; }
-          100% { transform: translateY(220px); opacity: 0.2; }
-        }
-        .s1 { left: 10%; font-size: 16px; animation-duration: 4s; animation-delay: 0s; }
-        .s2 { left: 25%; font-size: 22px; animation-duration: 6s; animation-delay: 1s; }
-        .s3 { left: 40%; font-size: 14px; animation-duration: 5s; animation-delay: 2s; }
-        .s4 { left: 55%; font-size: 20px; animation-duration: 7s; animation-delay: 0.5s; }
-        .s5 { left: 70%; font-size: 18px; animation-duration: 4.5s; animation-delay: 1.5s; }
-        .s6 { left: 85%; font-size: 24px; animation-duration: 5.5s; animation-delay: 0.2s; }
-        .s7 { left: 93%; font-size: 15px; animation-duration: 6.5s; animation-delay: 2.5s; }
-      </style>
-      <div class="box">
-        Привет! Добро пожаловать в мой профиль ❄️
-        <div class="snowflake s1">❄</div>
-        <div class="snowflake s2">❅</div>
-        <div class="snowflake s3">❆</div>
-        <div class="snowflake s4">❄</div>
-        <div class="snowflake s5">❅</div>
-        <div class="snowflake s6">❆</div>
-        <div class="snowflake s7">❄</div>
-      </div>
-    </div>
-  </foreignObject>
+<svg viewBox="0 0 800 200" width="800" height="200" xmlns="http://w3.org">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" rx="12" fill="url(#bg)"/>
+
+  <text x="400" y="108" fill="#ffffff" font-family="sans-serif" font-size="26" font-weight="bold" text-anchor="middle">
+    Привет! Добро пожаловать в мой профиль ❄️
+  </text>
+
+  <text x="80" y="-10" fill="#ffffff" font-size="18">❄
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="4s" repeatCount="indefinite"/>
+  </text>
+  <text x="180" y="-10" fill="#ffffff" font-size="22" opacity="0.8">❅
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="6s" begin="1s" repeatCount="indefinite"/>
+  </text>
+  <text x="290" y="-10" fill="#ffffff" font-size="16" opacity="0.9">❆
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="5s" begin="2s" repeatCount="indefinite"/>
+  </text>
+  <text x="420" y="-10" fill="#ffffff" font-size="20">❄
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="7s" begin="0.5s" repeatCount="indefinite"/>
+  </text>
+  <text x="540" y="-10" fill="#ffffff" font-size="18" opacity="0.85">❅
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="4.5s" begin="1.5s" repeatCount="indefinite"/>
+  </text>
+  <text x="650" y="-10" fill="#ffffff" font-size="24">❆
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="5.5s" begin="0.2s" repeatCount="indefinite"/>
+  </text>
+  <text x="740" y="-10" fill="#ffffff" font-size="16" opacity="0.9">❄
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 230" dur="6.5s" begin="2.5s" repeatCount="indefinite"/>
+  </text>
 </svg>
